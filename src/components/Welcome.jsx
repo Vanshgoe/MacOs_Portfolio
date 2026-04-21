@@ -3,8 +3,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const FONT_WEIGHTS = {
-    subtitle: { min: 100, max: 400, default: 100 },
-    title: { min: 400, max: 900, default: 400 },
+    subtitle: { min: 100, max: 4000, default: 200 },
+    title: { min: 500, max: 900, default: 400 },
 };
 
 const renderText = (text, className, baseWeight = 400) => {
@@ -14,8 +14,8 @@ const renderText = (text, className, baseWeight = 400) => {
             className={className}
             style={{ fontVariationSettings: `"wght" ${baseWeight}` }}
         >
-      {char === " " ? "\u00A0" : char}
-    </span>
+            {char === " " ? "\u00A0" : char}
+        </span>
     ));
 };
 
@@ -85,11 +85,16 @@ const Welcome = () => {
             </p>
 
             <h1 ref={titleRef} className="mt-7">
-                {renderText("Portfolio", "text-9xl italic font-georama")}
+                {renderText(
+                    "Portfolio",
+                    "text-9xl italic font-georama"
+                )}
             </h1>
 
             <div className="small-screen">
-                <p>This portfolio is designed for desktop/tablet screens only.</p>
+                <p>
+                    This portfolio is designed for desktop/tablet screens only.
+                </p>
             </div>
         </section>
     );
