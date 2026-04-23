@@ -9,22 +9,7 @@ const Dock = () => {
     const {openWindow,closeWindow,windows}=useWindowStore();
     const dockRef = useRef(null);
 
-    const toggleApp = (app) => {
-        if (!app.canOpen) return;
 
-        const { openWindow, closeWindow, windows}  = useWindowStore.getState();
-        const win = windows[app.id];
-
-        if (!win) return;
-
-        if (win.isOpen) {
-            closeWindow(app.id);
-        } else {
-            openWindow(app.id);
-        }
-
-        console.log(useWindowStore.getState().windows);
-    };
 
     useGSAP(() => {
         const dock = dockRef.current;
@@ -74,6 +59,22 @@ const Dock = () => {
             dock.removeEventListener("mouseleave", resetIcons);
         };
     }, []);
+    const toggleApp = (app) => {
+        if (!app.canOpen) return;
+        const window = windows[app.id];
+        if(!window){
+            console.error(`Window not found for app "${app.id}"`);
+            return;
+        }
+        if (window.isOpen) {
+        closeWindow(app.id);
+        }
+        else
+        {
+            openWindow(app.id);
+        }
+        console.log(windows);
+    };
 
     return (
         <section id="dock">
