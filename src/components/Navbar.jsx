@@ -25,7 +25,7 @@ const Navbar=()=>{const today = dayjs().format('DD MM YYYY');
                             ))
                         }
                 </ul>
-                    <tiime>{today}</tiime>
+                    <time>{today}</time>
                 </div>
         </nav>
 
