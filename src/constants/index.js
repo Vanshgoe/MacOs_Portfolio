@@ -38,37 +38,37 @@ const navIcons = [
 const dockApps = [
     {
         id: "finder",
-        name: "Portfolio", // was "Finder"
+        name: "Portfolio",
         icon: "finder.png",
         canOpen: true,
     },
     {
         id: "safari",
-        name: "Articles", // was "Safari"
+        name: "Articles",
         icon: "safari.png",
         canOpen: true,
     },
     {
         id: "photos",
-        name: "Gallery", // was "Photos"
+        name: "Gallery",
         icon: "photos.png",
         canOpen: true,
     },
     {
         id: "contact",
-        name: "Contact", // or "Get in touch"
+        name: "Contact",
         icon: "contact.png",
         canOpen: true,
     },
     {
         id: "terminal",
-        name: "Skills", // was "Terminal"
+        name: "Skills",
         icon: "terminal.png",
         canOpen: true,
     },
     {
         id: "trash",
-        name: "Archive", // was "Trash"
+        name: "Archive",
         icon: "trash.png",
         canOpen: true,
     },
@@ -253,7 +253,7 @@ const WORK_LOCATION = {
                     icon: "/images/safari.png",
                     kind: "file",
                     fileType: "url",
-                    href: "https://your-portfolio-link.com", // 🔁 replace with your actual link
+                    href: "https://vanshgoel.vercel.app/",
                     position: "top-46 left-10",
                 },
                 {
@@ -263,7 +263,7 @@ const WORK_LOCATION = {
                     kind: "file",
                     fileType: "img",
                     position: "top-5 left-70",
-                    imageUrl: "/images/project-1.png", // 🔁 replace if needed
+                    imageUrl: "/images/project-1.png",
                 },
             ],
         },
